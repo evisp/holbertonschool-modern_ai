@@ -38,7 +38,7 @@ def scrape_products(url):
             "title" (str): the title attribute of the product link,
             "price" (str): the text of the h4.price element,
             "description" (str): the text of the p.description element,
-            "rating" (str): the data-rating value under .ratings.
+            "rating" (int): the data-rating value under .ratings.
     """
     driver = _build_driver()
     try:
@@ -57,7 +57,7 @@ def scrape_products(url):
                 "title": link.get_attribute("title"),
                 "price": price.text.strip(),
                 "description": description.text.strip(),
-                "rating": rating.get_attribute("data-rating")
+                "rating": int(rating.get_attribute("data-rating"))
             })
         return products
     finally:
