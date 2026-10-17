@@ -23,7 +23,7 @@ def login_and_scrape(login_url, user, pwd):
 
     Raises:
         requests.exceptions.HTTPError: on any HTTP status >= 400.
-        ValueError: if the CSRF token is missing or the login fails.
+        TypeError: if the login page has no csrf_token input.
     """
     quotes_url = requests.compat.urljoin(login_url, "/")
 
@@ -32,12 +32,10 @@ def login_and_scrape(login_url, user, pwd):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
 
-        token_input = soup.find("input", attrs={"name": "csrf_token"})
-        if token_input is None or not token_input.get("value"):
-            raise ValueError("CSRF token not found on login page")
+        token = soup.find("input", attrs={"name": "csrf_token"})["value"]
 
         payload = {
-            "csrf_token": token_input["value"],
+            "csrf_token": token,
             "username": user,
             "password": pwd
         }
@@ -47,9 +45,6 @@ def login_and_scrape(login_url, user, pwd):
         response = session.get(quotes_url, timeout=10)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
-
-    if soup.find("a", href="/logout") is None:
-        raise ValueError("Login failed")
 
     quotes = []
     for block in soup.select("div.quote"):
