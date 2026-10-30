@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#475569"/></marker>
+  </defs>
+  <rect width="960" height="330" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Telco churn: from raw CSV to model-ready data</text>
+
+  <g font-size="13" text-anchor="middle">
+    <rect x="20" y="70" width="150" height="150" rx="10" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="95" y="96" font-weight="700" fill="#0f172a">1. Inspect</text>
+    <text x="95" y="122" fill="#334155">shape, dtypes,</text><text x="95" y="140" fill="#334155">missing, duplicates</text>
+    <text x="95" y="170" fill="#64748b" font-size="12">Task 0, 1</text>
+
+    <rect x="196" y="70" width="150" height="150" rx="10" fill="#fef3c7" stroke="#d97706"/>
+    <text x="271" y="96" font-weight="700" fill="#0f172a">2. Clean</text>
+    <text x="271" y="122" fill="#334155">fix types, handle NaN,</text><text x="271" y="140" fill="#334155">dedupe, drop ID</text>
+    <text x="271" y="170" fill="#64748b" font-size="12">Task 2 - 5</text>
+
+    <rect x="372" y="70" width="150" height="150" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="447" y="96" font-weight="700" fill="#0f172a">3. Explore</text>
+    <text x="447" y="122" fill="#334155">distributions,</text><text x="447" y="140" fill="#334155">correlations, vs churn</text>
+    <text x="447" y="170" fill="#64748b" font-size="12">Task 6 - 11</text>
+
+    <rect x="548" y="70" width="150" height="150" rx="10" fill="#ede9fe" stroke="#7c3aed"/>
+    <text x="623" y="96" font-weight="700" fill="#0f172a">4. Test</text>
+    <text x="623" y="122" fill="#334155">chi-square (categorical)</text><text x="623" y="140" fill="#334155">Welch t-test (numeric)</text>
+    <text x="623" y="170" fill="#64748b" font-size="12">Task 12, 13</text>
+
+    <rect x="724" y="70" width="150" height="150" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="799" y="96" font-weight="700" fill="#0f172a">5. Prepare</text>
+    <text x="799" y="122" fill="#334155">features, encoding,</text><text x="799" y="140" fill="#334155">scaling, split</text>
+    <text x="799" y="170" fill="#64748b" font-size="12">Task 14 - 17</text>
+  </g>
+
+  <g stroke="#475569" stroke-width="2" marker-end="url(#a)">
+    <line x1="170" y1="145" x2="194" y2="145"/><line x1="346" y1="145" x2="370" y2="145"/>
+    <line x1="522" y1="145" x2="546" y2="145"/><line x1="698" y1="145" x2="722" y2="145"/>
+  </g>
+
+  <g font-size="12" fill="#334155" text-anchor="middle">
+    <text x="95" y="262">Telco-Customer-Churn.csv</text>
+    <text x="95" y="280" fill="#64748b">customers x 21 columns</text>
+    <text x="799" y="262">X_train, X_test, y_train, y_test</text>
+    <text x="799" y="280" fill="#64748b">stratified 80/20 split</text>
+    <text x="447" y="262">Question: what separates customers who churn?</text>
+  </g>
+  <g stroke="#94a3b8" stroke-dasharray="4 4" stroke-width="1.5"><line x1="95" y1="222" x2="95" y2="248"/><line x1="799" y1="222" x2="799" y2="248"/></g>
+</svg>

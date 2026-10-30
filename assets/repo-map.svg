@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#475569"/></marker></defs>
+  <rect width="960" height="360" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="340" y="24" width="280" height="54" rx="10" fill="#0f172a"/>
+  <text x="480" y="49" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">holbertonschool-modern_ai</text>
+  <text x="480" y="67" text-anchor="middle" font-size="12" fill="#cbd5e1">Holberton modern AI curriculum</text>
+
+  <rect x="340" y="120" width="280" height="54" rx="10" fill="#e0e7ff" stroke="#4f46e5"/>
+  <text x="480" y="145" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">data_analysis/</text>
+  <text x="480" y="163" text-anchor="middle" font-size="12" fill="#475569">getting, cleaning and understanding data</text>
+
+  <rect x="60" y="236" width="380" height="96" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="250" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">web_scraping/</text>
+  <text x="250" y="284" text-anchor="middle" font-size="12" fill="#334155">9 tasks: requests, BeautifulSoup, Selenium</text>
+  <text x="250" y="304" text-anchor="middle" font-size="12" fill="#64748b">Get data: web pages to Python lists of dicts</text>
+
+  <rect x="520" y="236" width="380" height="96" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="710" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">data_preparation_visualization/</text>
+  <text x="710" y="284" text-anchor="middle" font-size="12" fill="#334155">18 tasks: pandas, matplotlib, scipy, scikit-learn</text>
+  <text x="710" y="304" text-anchor="middle" font-size="12" fill="#64748b">Understand data: CSV to model-ready splits</text>
+
+  <g stroke="#475569" stroke-width="2" marker-end="url(#a)" fill="none">
+    <line x1="480" y1="78" x2="480" y2="118"/>
+    <path d="M430 174 L250 234"/><path d="M530 174 L710 234"/>
+    <path d="M442 284 L518 284" stroke-dasharray="5 4"/>
+  </g>
+</svg>

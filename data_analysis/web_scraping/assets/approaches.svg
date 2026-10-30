@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="960" height="400" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="480" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">Web scraping: choose the lightest tool that reaches the data</text>
+  <text x="480" y="56" text-anchor="middle" font-size="13" fill="#64748b">cost and complexity grow from left to right</text>
+
+  <g font-size="13">
+    <rect x="20" y="78" width="295" height="250" rx="10" fill="#dbeafe" stroke="#2563eb"/>
+    <text x="167" y="104" text-anchor="middle" font-weight="700" fill="#0f172a">Static HTML</text>
+    <text x="167" y="122" text-anchor="middle" font-size="12" fill="#475569">requests + BeautifulSoup</text>
+    <text x="40" y="154" fill="#334155"><tspan font-weight="700">0</tspan>  fetch_html: GET + error handling</text>
+    <text x="40" y="182" fill="#334155"><tspan font-weight="700">1</tspan>  scrape_basic: CSS selectors</text>
+    <text x="40" y="210" fill="#334155"><tspan font-weight="700">2</tspan>  scrape_paginated: follow Next links</text>
+
+    <rect x="332" y="78" width="295" height="250" rx="10" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="479" y="104" text-anchor="middle" font-weight="700" fill="#0f172a">Structured sources</text>
+    <text x="479" y="122" text-anchor="middle" font-size="12" fill="#475569">skip the HTML, read the data directly</text>
+    <text x="352" y="154" fill="#334155"><tspan font-weight="700">3</tspan>  scrape_via_api: JSON endpoint</text>
+    <text x="352" y="182" fill="#334155"><tspan font-weight="700">4</tspan>  extract_jsonld: embedded JSON-LD</text>
+
+    <rect x="644" y="78" width="296" height="250" rx="10" fill="#fef3c7" stroke="#d97706"/>
+    <text x="792" y="104" text-anchor="middle" font-weight="700" fill="#0f172a">Stateful and dynamic</text>
+    <text x="792" y="122" text-anchor="middle" font-size="12" fill="#475569">sessions, then a real browser</text>
+    <text x="664" y="154" fill="#334155"><tspan font-weight="700">5</tspan>  login_and_scrape: session + CSRF</text>
+    <text x="664" y="182" fill="#334155"><tspan font-weight="700">6</tspan>  scrape_products: Selenium cards</text>
+    <text x="664" y="210" fill="#334155"><tspan font-weight="700">7</tspan>  scrape_product_detail: one page</text>
+    <text x="664" y="238" fill="#334155"><tspan font-weight="700">8</tspan>  scroll_and_scrape: infinite scroll</text>
+  </g>
+
+  <g font-size="12" fill="#334155" text-anchor="middle">
+    <text x="167" y="290">Site: quotes.toscrape.com</text>
+    <text x="479" y="290">Site: quotes.toscrape.com</text>
+    <text x="792" y="290">5: quotes.toscrape.com</text>
+    <text x="792" y="308">6-8: webscraper.io test site</text>
+  </g>
+
+  <rect x="20" y="348" width="920" height="36" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="480" y="371" text-anchor="middle" font-size="13" fill="#334155">Output of every task: a list of dicts, (text, author, tags) or (title, price, description, rating)</text>
+</svg>
