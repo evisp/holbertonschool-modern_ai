@@ -30,13 +30,15 @@ def encode_features(df):
 
     binary_cols = ['Partner', 'Dependents', 'PaperlessBilling',
                    'SeniorCitizen']
-    binary_encoder = preprocessing.OrdinalEncoder()
-    df[binary_cols] = binary_encoder.fit_transform(df[binary_cols])
+    binary_encoder = preprocessing.OrdinalEncoder(categories=[['No', 'Yes']])
+    for col in binary_cols:
+        df[col] = binary_encoder.fit_transform(df[[col]]).astype(int)
 
     df = pd.get_dummies(df, columns=['Contract', 'PaymentMethod'],
-                        drop_first=True)
+                        drop_first=True, dtype=int)
 
     tenure_encoder = preprocessing.OrdinalEncoder()
-    df['TenureGroup'] = tenure_encoder.fit_transform(df[['TenureGroup']])
+    df['TenureGroup'] = tenure_encoder.fit_transform(
+        df[['TenureGroup']]).astype(int)
 
     return df, label_encoder, binary_encoder, tenure_encoder
